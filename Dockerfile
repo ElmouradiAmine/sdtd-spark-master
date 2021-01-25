@@ -50,11 +50,6 @@ ADD startup_script.sh /usr/local/bin/startup_script.sh
 RUN chmod +x /usr/local/bin/startup_script.sh
 
 
-
-
-# ADD APP
-COPY ./StreamHandler $HOME/StreamHandler
-
 # HIGH AVAILABILITY CONFIG
 COPY ./ha.conf $HOME/spark/sbin/ha.conf
 
@@ -62,6 +57,6 @@ COPY ./ha.conf $HOME/spark/sbin/ha.conf
 EXPOSE 8080 7077
 
 # RUN THE STARTUP SCRIPT
-CMD [ "startup_script.sh" ]
+# CMD [ "startup_script.sh" ]
 
 
