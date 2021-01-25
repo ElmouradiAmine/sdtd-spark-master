@@ -2,7 +2,7 @@
 
 # LAUNCH MASTER NODE
 cd $HOME/spark/sbin && ./start-master.sh --host 172.17.0.2 --properties-file ha.conf
-
+while true; do sleep 1000; done
 # LAUNCH A WORKER NODE
 # ./start-slave.sh spark://127.0.0.1:7077, --host 127.0.0.1
 
